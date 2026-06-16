@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>HP Traders - The Future of Automated Trading</title>
+<style>
+:root{--bg:#080d18;--bg2:#0b1220;--card:#111c2e;--green:#00e5b0;--red:#ff4d6d;--blue:#00b4ff;--yellow:#ffd700;--purple:#a855f7;--grey:#8892a4;--muted:#3d4f6a;--border:#1a2740;--nav:#060c17}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:#fff;min-height:100vh;overflow-x:hidden}
+@keyframes pls{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(0,229,176,.3)}50%{box-shadow:0 0 40px rgba(0,229,176,.6)}}
+@keyframes sp{to{transform:rotate(360deg)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,12,23,.97);backdrop-filter:blur(14px);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--border)}
+.logo{font-size:1.4rem;font-weight:900;letter-spacing:-.5px}.logo .hp{color:var(--green)}.logo .tr{color:var(--red)}
+.btn-login-nav{background:#fff;color:#000;border:none;padding:10px 24px;border-radius:25px;font-weight:800;font-size:.88rem;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px}
+.btn-login-nav:hover{background:var(--green);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,229,176,.3)}
+/* HERO */
+.hero{min-height:100vh;padding:100px 60px 50px;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(0,180,255,.08) 0,transparent 60%),radial-gradient(ellipse 60% 50% at 10% 80%,rgba(0,229,176,.06) 0,transparent 55%),var(--bg);position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,180,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,180,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:6px 16px;font-size:.78rem;color:var(--grey);margin-bottom:28px;width:fit-content}
+.bdot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pls 2s infinite;flex-shrink:0}
+.hero-brand{font-size:clamp(3rem,9vw,6.5rem);font-weight:900;line-height:1;margin-bottom:14px}
+.hero-sub{font-size:clamp(1.1rem,2.5vw,1.75rem);font-weight:700;margin-bottom:18px}
+.hero-desc{max-width:600px;color:var(--grey);line-height:1.75;margin-bottom:26px;font-size:.95rem}
+.hero-bullets{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.bullet{border-left:3px solid var(--green);padding:9px 16px;background:rgba(0,229,176,.04);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--grey);max-width:600px;line-height:1.55}
+.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.btn-cta{background:var(--green);color:#000;border:none;padding:14px 30px;border-radius:10px;font-weight:900;font-size:.95rem;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.2s;animation:glow 3s infinite}
+.btn-cta:hover{background:#00ffcc;transform:translateY(-2px)}
+.btn-demo{background:none;color:#fff;border:2px solid var(--border);padding:13px 26px;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer;transition:.2s}
+.btn-demo:hover{border-color:var(--blue);color:var(--blue)}
+.perks{display:flex;gap:18px;flex-wrap:wrap}
+.perk{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--grey)}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 60px 70px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;transition:.2s}
+.stat:hover{border-color:var(--green);transform:translateY(-2px)}
+.stat-n{font-size:2rem;font-weight:900}.stat-l{font-size:.76rem;color:var(--grey);margin-top:4px}
+/* FEATURES */
+.feat-sec{padding:80px 60px;background:var(--bg2)}
+.eyebrow{font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:900;margin-bottom:12px}
+.sec-desc{color:var(--grey);max-width:500px;line-height:1.7;margin-bottom:48px;font-size:.9rem}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.fcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:.3s;cursor:pointer}
+.fcard:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 14px 35px rgba(0,0,0,.35)}
+.ficon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+.ftitle{font-size:.98rem;font-weight:700;margin-bottom:7px}
+.fdesc{font-size:.82rem;color:var(--grey);line-height:1.6}
+/* CTA */
+.cta-sec{padding:80px 60px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(0,229,176,.1) 0,transparent 70%),var(--bg)}
+.cta-sec h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;margin-bottom:14px}
+.cta-sec p{color:var(--grey);margin-bottom:36px;font-size:.95rem}
+footer{background:var(--nav);border-top:1px solid var(--border);padding:24px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer p{font-size:.78rem;color:var(--muted)}
+/* LOGIN MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center;padding:16px}
+.modal-overlay.show{display:flex}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px 32px;width:100%;max-width:420px;position:relative;animation:slideUp .25s ease}
+.modal-x{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--grey);font-size:1.4rem;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.modal-x:hover{background:rgba(255,255,255,.08);color:#fff}
+.modal-logo{font-size:2rem;font-weight:900;text-align:center;margin-bottom:4px}
+.modal-sub{text-align:center;color:var(--grey);font-size:.83rem;margin-bottom:26px}
+.deriv-btn{width:100%;background:linear-gradient(135deg,#cc2222,#ff444f);color:#fff;border:none;padding:14px;border-radius:10px;font-weight:900;font-size:.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:.2s;margin-bottom:12px}
+.deriv-btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.divider{display:flex;align-items:center;gap:12px;margin:16px 0;color:var(--muted);font-size:.76rem}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.demo-btn{width:100%;background:rgba(0,229,176,.07);border:1.5px solid var(--green);color:var(--green);padding:13px;border-radius:10px;font-weight:700;font-size:.88rem;cursor:pointer;transition:.2s}
+.demo-btn:hover{background:rgba(0,229,176,.15)}
+.modal-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:14px;line-height:1.55}
+.modal-note a{color:var(--blue);text-decoration:none}
+.modal-error{display:none;background:rgba(255,77,109,.1);border:1px solid var(--red);color:var(--red);padding:10px 14px;border-radius:8px;font-size:.78rem;margin-top:12px;text-align:center}
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 16px;height:56px}
+  .logo{font-size:1.25rem}
+  .btn-login-nav{padding:8px 16px;font-size:.82rem}
+  .hero{padding:80px 20px 36px}
+  .hero-brand{font-size:clamp(2.8rem,12vw,4rem)}
+  .stats{grid-template-columns:1fr 1fr;padding:0 20px 50px;gap:12px}
+  .stat{padding:16px 18px}
+  .stat-n{font-size:1.6rem}
+  .feat-sec,.cta-sec{padding:50px 20px}
+  .feat-grid{grid-template-columns:1fr}
+  footer{padding:18px 20px;flex-direction:column;text-align:center}
+  .perks{gap:12px}
+  .cta-row{gap:10px}
+  .btn-cta,.btn-demo{width:100%;justify-content:center}
+  .modal{padding:28px 22px}
+}
+@media(max-width:400px){
+  .hero-brand{font-size:2.4rem}
+  .stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="hp">HP</span><span class="tr">Traders</span></div>
+  <button class="btn-login-nav" onclick="showModal()">Login Now &rarr;</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.6" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 400 Q360 200 720 350 Q1080 500 1440 300" stroke="#00e5b022" stroke-width="2" fill="none"/>
+    <path d="M0 500 Q400 260 800 430 Q1100 580 1440 380" stroke="#00b4ff16" stroke-width="1.5" fill="none"/>
+  </svg>
+  <div class="badge"><span class="bdot"></span> Trusted by 50,000+ Traders Worldwide</div>
+  <div class="hero-brand"><span style="color:var(--green)">HP</span><span style="color:var(--red)">Traders</span></div>
+  <div class="hero-sub">The Future of Automated Trading</div>
+  <p class="hero-desc">Harness the power of AI-driven bots, real-time analytics, and copy trading to maximize your profits. Built on Deriv infrastructure.</p>
+  <div class="hero-bullets">
+    <div class="bullet">Build, test, and launch automated strategies from one clean workspace. Market scanning, bot automation, account tools, and trading insights all in one place.</div>
+    <div class="bullet">Start with a virtual account, scale when ready. You control risk, stake size, trade settings, and every bot you run.</div>
+  </div>
+  <div class="cta-row">
+    <button class="btn-cta" onclick="showModal()">Start Trading Now &rarr;</button>
+    <button class="btn-demo" onclick="demoLogin()">Try Demo Free</button>
+  </div>
+  <div class="perks">
+    <span class="perk">&#10003; No Credit Card</span>
+    <span class="perk">&#10003; $10,000 Virtual</span>
+    <span class="perk">&#10003; M-Pesa Deposits</span>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">50K+</div><div class="stat-l">Active Traders</div></div>
+  <div class="stat"><div class="stat-n">$2.5B+</div><div class="stat-l">Trading Volume</div></div>
+  <div class="stat"><div class="stat-n">99.9%</div><div class="stat-l">Uptime</div></div>
+  <div class="stat"><div class="stat-n">150+</div><div class="stat-l">Trading Pairs</div></div>
+</div>
+
+<section class="feat-sec">
+  <div class="eyebrow">Why HP Traders</div>
+  <div class="sec-title">Everything You Need to Trade Smarter</div>
+  <p class="sec-desc">From bot building to copy trading &mdash; HP Traders puts professional-grade tools in your hands.</p>
+  <div class="feat-grid">
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(0,180,255,.15)">&#129302;</div><div class="ftitle">Bot Builder</div><div class="fdesc">Drag-and-drop visual strategy builder. No coding needed. Full control over every parameter.</div></div>
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(0,229,176,.15)">&#9889;</div><div class="ftitle">Free Bots Library</div><div class="fdesc">Infinity Algo, Novaswitch, Even/Odd strategies and more &mdash; all ready to run instantly.</div></div>
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(168,85,247,.15)">&#129504;</div><div class="ftitle">AI Software</div><div class="fdesc">AI Robots with smart edge detection for Over/Under, Even/Odd, and Dual Edge strategies.</div></div>
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(255,215,0,.15)">&#128202;</div><div class="ftitle">Analysis Tool</div><div class="fdesc">Real-time digit distribution, Over/Under, Match/Differ, Even/Odd statistics across 5000 ticks.</div></div>
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(255,77,109,.15)">&#128101;</div><div class="ftitle">Copy Trader</div><div class="fdesc">Mirror demo trades to real accounts. Add multiple client tokens and sync portfolios automatically.</div></div>
+    <div class="fcard" onclick="showModal()"><div class="ficon" style="background:rgba(0,229,176,.15)">&#128247;</div><div class="ftitle">M-Pesa Deposits</div><div class="fdesc">Fund your account instantly via M-Pesa STK Push. Deposit from KES 100. Fast and secure.</div></div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <h2>Ready to Trade Smarter?</h2>
+  <p>Join 50,000+ traders who trust HP Traders every day.</p>
+  <button class="btn-cta" onclick="showModal()" style="margin:0 auto;display:inline-flex;animation:none">Get Started Free &rarr;</button>
+</section>
+
+<footer>
+  <div class="logo" style="font-size:1.1rem"><span class="hp">HP</span><span class="tr">Traders</span></div>
+  <p>&copy; 2026 HP Traders. Trading involves risk. Trade responsibly.</p>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="modal" onclick="overlayClick(event)">
+  <div class="modal">
+    <button class="modal-x" onclick="hideModal()">&times;</button>
+    <div class="modal-logo"><span style="color:var(--green)">HP</span><span style="color:var(--red)">Traders</span></div>
+    <div class="modal-sub">Sign in to access your trading dashboard</div>
+    <button class="deriv-btn" onclick="loginDeriv()">
+      <svg width="20" height="20" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#fff"/><path d="M20 8C13.37 8 8 13.37 8 20s5.37 12 12 12 12-5.37 12-12S26.63 8 20 8zm0 21.6c-5.3 0-9.6-4.3-9.6-9.6S14.7 10.4 20 10.4s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6z" fill="#ff444f"/><circle cx="20" cy="20" r="5.6" fill="#ff444f"/></svg>
+      Continue with Deriv Account
+    </button>
+    <div class="divider">or</div>
+    <button class="demo-btn" onclick="demoLogin()">&#127918; Use Demo Account &mdash; $10,000 Virtual</button>
+    <div class="modal-note">
+      No Deriv account? <a href="https://deriv.com/signup/" target="_blank">Create one free &rarr;</a><br/>
+      By signing in you agree to our Terms of Service.
+    </div>
+    <div class="modal-error" id="modal-err"></div>
+  </div>
+</div>
+
+<script>
+function showModal(){document.getElementById('modal').classList.add('show');}
+function hideModal(){document.getElementById('modal').classList.remove('show');}
+function overlayClick(e){if(e.target.id==='modal')hideModal();}
+function loginDeriv(){window.location.href='/api/deriv/login';}
+function demoLogin(){
+  localStorage.setItem('hpt_token','DEMO');
+  localStorage.setItem('hpt_user',JSON.stringify({loginid:'DEMO001',fullname:'Demo Trader',email:'demo@hptraders.com',balance:10000,currency:'USD',isDemo:true}));
+  window.location.href='/dashboard';
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const t=localStorage.getItem('hpt_token'),u=localStorage.getItem('hpt_user');
+  if(t&&u){window.location.href='/dashboard';return;}
+  const err=new URLSearchParams(window.location.search).get('error');
+  if(err){showModal();const el=document.getElementById('modal-err');el.style.display='block';el.textContent='Login failed: '+err.replace(/_/g,' ');}
+});
+</script>
+</body>
+</html>
