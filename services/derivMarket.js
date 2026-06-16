@@ -9,7 +9,7 @@ export function onTick(cb) { subscribers.push(cb); }
 export function getLatestTick() { return latestTick; }
 
 /* ── Start live price stream (no auth needed) ── */
-export function startDerivStream(appId = process.env.DERIV_APP_ID || "1089") {
+export function startDerivStream(appId = process.env.DERIV_APP_ID || "33zfvRF3DsU2CWrMGx7th") {
   try {
     ws = new WebSocket(`wss://ws.binaryws.com/websockets/v3?app_id=${appId}`);
     ws.on("open", () => {
