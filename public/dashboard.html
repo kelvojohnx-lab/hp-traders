@@ -381,11 +381,75 @@ html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color
   .dc{width:56px;height:56px}
   .snap-grid{grid-template-columns:1fr 1fr}
 }
+
+/* DEMO BANNER */
+.demo-banner{position:fixed;top:0;left:0;right:0;z-index:400;background:linear-gradient(90deg,#1a0a00,#2a1400,#1a0a00);border-bottom:1px solid var(--yellow);padding:8px 16px;display:none;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.demo-dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);animation:pulse 1.5s infinite;flex-shrink:0}
+.demo-btxt{font-size:.78rem;color:var(--yellow);font-weight:600}
+.demo-btxt span{color:rgba(255,215,0,.6);font-weight:400}
+.demo-bbtns{display:flex;gap:7px;flex-shrink:0}
+.btn-upg-banner{background:var(--yellow);color:#000;border:none;padding:6px 14px;border-radius:7px;font-weight:900;font-size:.75rem;cursor:pointer;white-space:nowrap}
+.btn-upg-banner:hover{background:#ffe44d}
+.btn-lo-banner{background:none;border:1px solid rgba(255,215,0,.3);color:var(--yellow);padding:6px 12px;border-radius:7px;font-weight:700;font-size:.75rem;cursor:pointer;white-space:nowrap}
+.btn-lo-banner:hover{background:rgba(255,215,0,.1)}
+/* ACCOUNT CARD */
+.acct-card{background:linear-gradient(135deg,rgba(0,229,176,.1),rgba(0,180,255,.06));border:1px solid rgba(0,229,176,.25);border-radius:14px;padding:18px;margin-bottom:18px;display:none;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.acct-name{font-size:1rem;font-weight:800;margin-bottom:2px}
+.acct-loginid{font-size:.7rem;color:var(--muted);margin-bottom:8px}
+.acct-bal-row{display:flex;align-items:baseline;gap:5px}
+.acct-bal-num{font-size:1.9rem;font-weight:900;color:var(--green)}
+.acct-bal-cur{font-size:.8rem;color:var(--green);font-weight:700}
+.live-badge{display:flex;align-items:center;gap:5px;background:rgba(0,229,176,.1);border:1px solid rgba(0,229,176,.2);padding:4px 10px;border-radius:6px;font-size:.68rem;color:var(--green);font-weight:700}
+.btn-refresh{background:none;border:1px solid var(--border);color:var(--grey);padding:5px 10px;border-radius:6px;font-size:.68rem;cursor:pointer;margin-top:6px;display:flex;align-items:center;gap:4px}
+.btn-refresh:hover{border-color:var(--green);color:var(--green)}
+/* DEMO CARD */
+.demo-card{background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(255,165,0,.04));border:1px solid rgba(255,215,0,.25);border-radius:14px;padding:18px;margin-bottom:18px;display:none}
+.demo-card-title{font-size:.74rem;font-weight:800;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.demo-card-bal{font-size:1.8rem;font-weight:900;color:#fff;margin-bottom:4px}
+.demo-card-sub{font-size:.72rem;color:var(--muted);margin-bottom:14px}
+.demo-card-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.btn-upg-big{background:var(--yellow);color:#000;border:none;padding:10px 20px;border-radius:9px;font-weight:900;font-size:.86rem;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px}
+.btn-upg-big:hover{background:#ffe44d;transform:translateY(-1px)}
+.btn-lo-demo{background:none;border:1px solid var(--border);color:var(--grey);padding:9px 16px;border-radius:9px;font-weight:600;font-size:.82rem;cursor:pointer}
+.btn-lo-demo:hover{border-color:var(--red);color:var(--red)}
+.demo-feats-row{display:flex;gap:12px;flex-wrap:wrap;padding-top:10px;border-top:1px solid rgba(255,215,0,.1)}
+.dfeat{font-size:.68rem;color:rgba(255,215,0,.7);display:flex;align-items:center;gap:4px}
+/* UPGRADE MODAL */
+.upg-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:700;display:none;align-items:center;justify-content:center;padding:16px}
+.upg-overlay.show{display:flex}
+.upg-modal{background:var(--card);border:1px solid var(--yellow);border-radius:22px;padding:36px 28px;width:100%;max-width:400px;position:relative;text-align:center}
+.upg-x{position:absolute;top:12px;right:13px;background:none;border:none;color:var(--grey);font-size:1.4rem;cursor:pointer;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.upg-x:hover{background:rgba(255,255,255,.08);color:#fff}
+.upg-feats{display:flex;flex-direction:column;gap:7px;margin-bottom:22px;text-align:left}
+.upg-feat{display:flex;align-items:center;gap:9px;font-size:.8rem;padding:8px 11px;background:rgba(0,229,176,.05);border-radius:8px}
+.btn-upg-deriv{width:100%;background:linear-gradient(135deg,#cc1111,#ff3344);color:#fff;border:none;padding:14px;border-radius:11px;font-weight:900;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;margin-bottom:8px}
+.btn-upg-deriv:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-stay-demo{width:100%;background:none;border:1px solid var(--border);color:var(--grey);padding:11px;border-radius:10px;font-weight:600;font-size:.82rem;cursor:pointer}
+.btn-stay-demo:hover{border-color:var(--muted);color:#fff}
+/* NAV EXTRAS */
+.btn-nav-lo{background:none;border:1px solid var(--border);color:var(--grey);padding:5px 9px;border-radius:6px;font-size:.68rem;cursor:pointer;white-space:nowrap;transition:.15s}
+.btn-nav-lo:hover{border-color:var(--red);color:var(--red)}
+.bal-ldot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:none;flex-shrink:0}
+.bal-dtag{font-size:.54rem;background:var(--yellow);color:#000;padding:1px 5px;border-radius:3px;font-weight:800;margin-left:2px;display:none}
+@keyframes shim{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.bal-shim{display:inline-block;width:60px;height:12px;background:linear-gradient(90deg,var(--border) 25%,rgba(255,255,255,.06) 50%,var(--border) 75%);background-size:200% 100%;animation:shim 1.5s infinite;border-radius:4px;vertical-align:middle}
+@media(max-width:768px){.demo-banner{padding:6px 12px}.demo-btxt{font-size:.72rem}.acct-card{flex-direction:column}}
 </style>
 </head>
 <body>
 
 <!-- ═══════ APP NAV ═══════ -->
+
+<div class="demo-banner" id="demo-banner">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <span class="demo-dot"></span>
+    <span class="demo-btxt">Demo Account <span>&mdash; $10,000 virtual. No real money.</span></span>
+  </div>
+  <div class="demo-bbtns">
+    <button class="btn-upg-banner" onclick="showUpgrade()">Switch to Real Account</button>
+    <button class="btn-lo-banner" onclick="logout()">Logout</button>
+  </div>
+</div>
 <nav class="app-nav">
   <a href="/" class="nav-logo">
     <div class="nav-logo-sq">HP</div>
@@ -445,6 +509,36 @@ html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color
         <div style="font-size:.78rem;color:var(--grey)" id="mob-bal-cur">USD &bull; Deriv Account</div>
         <button onclick="showDeposit()" style="background:var(--green);color:#000;border:none;padding:9px 22px;border-radius:8px;font-weight:800;font-size:.82rem;cursor:pointer;margin-top:12px;display:inline-flex;align-items:center;gap:6px">&#128247; Deposit via M-Pesa</button>
       </div>
+
+    <div class="acct-card" id="acct-card">
+      <div>
+        <div class="acct-name" id="acct-name">--</div>
+        <div class="acct-loginid" id="acct-loginid">--</div>
+        <div class="acct-bal-row">
+          <div class="acct-bal-num" id="acct-bal">--</div>
+          <div class="acct-bal-cur" id="acct-cur">USD</div>
+        </div>
+        <button class="btn-refresh" onclick="refreshBalance()">Refresh Balance</button>
+      </div>
+      <div>
+        <div class="live-badge" style="margin-bottom:6px">LIVE DERIV</div>
+        <div style="font-size:.7rem;color:var(--muted)" id="acct-email">--</div>
+      </div>
+    </div>
+    <div class="demo-card" id="demo-card">
+      <div class="demo-card-title">Demo Account</div>
+      <div class="demo-card-bal" id="demo-bal-num">$10,000.00</div>
+      <div class="demo-card-sub">Virtual balance &mdash; No real money. All features available.</div>
+      <div class="demo-card-btns">
+        <button class="btn-upg-big" onclick="showUpgrade()">Switch to Real Deriv Account</button>
+        <button class="btn-lo-demo" onclick="logout()">Logout</button>
+      </div>
+      <div class="demo-feats-row">
+        <span class="dfeat">All bots &amp; strategies</span>
+        <span class="dfeat">Live market analysis</span>
+        <span class="dfeat">Switch to real anytime</span>
+      </div>
+    </div>
       <div class="qa-label">QUICK ACTIONS</div>
       <div class="qa-grid">
         <div class="qac" onclick="nav('bot-builder')"><div class="qac-icon">&#128193;</div><div class="qac-title">Upload Bot</div><div class="qac-desc">Import an XML bot from your computer</div><div class="qac-link">Open &rarr;</div></div>
@@ -800,73 +894,82 @@ html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color
 </div>
 
 <script>
-/* ══ DATA ══ */
-const autoBots=[{n:'Infinity Algo',d:'Advanced automated: Infinity Algo – professional-grade bot for consistent performance and risk management.'},{n:'The Under 7 8 9 Switcher',d:'Advanced automated: The Under 7 8 9 Switcher – professional-grade bot for performance and risk.'},{n:'Differ Switcher Smart Cycle',d:'Advanced automated: Differ Switcher – professional-grade bot for consistent execution.'},{n:'Even Odd Pattern Analysis',d:'Execute trades: if last 5 digits are Even trade Odd and vice versa.'},{n:'Even Odd Percentage Analysis',d:'Execute trades based on digit percentages – trade even if above 60%.'},{n:'Even Odd { Percentage Pattern Combo }',d:'Combine Even-Odd pattern with percentages for better entry points.'},{n:'Novaswitch',d:'Advanced automated: Novaswitch – professional-grade bot for consistent performance.'},{n:'Over 0 Recovery Over 4',d:'Advanced automated: Over 0 Recovery Over 4.'},{n:'Over 3 Recovery Over 5',d:'Advanced automated: Over 3 Recovery Over 5.'}];
-const normalBots=[{n:'Meta Switch',d:'Automate your trades with Meta Switch.'},{n:'The even odd bot 1',d:'Automate your trades with The even odd bot 1.'},{n:'Candle Mine Version 3.1',d:'Automate your trades with Candle Mine Version 3.1.'},{n:'Digit Hyper',d:'Automate your trades with Digit Hyper.'},{n:'Dollar Bot',d:'Automate your trades with Dollar Bot.'},{n:'Falcon Bot',d:'Automate your trades with Falcon Bot.'},{n:'Gibu V8 PRO (2024)',d:'Automate your trades with Gibu V8 PRO (2024).'},{n:'Ultra Ai 2025',d:'Automate your trades with Ultra Ai 2025.'},{n:'TRADE CITY BOT V2.0',d:'Automate your trades with TRADE CITY BOT Version 2.0.'}];
-const aiData=[[{t:'Over 1 / Under 8',d:'Trades whichever edge appears first between Over 1 and Under 8.',tags:['Over 1','Under 8'],s:'Over 1 / Under 8'},{t:'Over 2 / Under 7',d:'Combines Over 2 and Under 7 edge triggers into one AI bot.',tags:['Over 2','Under 7'],s:'Over 2 / Under 7'},{t:'Over 3 / Under 6',d:'Combines Over 3 and Under 6 edge triggers into one AI bot.',tags:['Over 3','Under 6'],s:'Over 3 / Under 6'},{t:'Over 4 / Under 5',d:'Combines Over 4 and Under 5 edge triggers into one AI bot.',tags:['Over 4','Under 5'],s:'Over 4 / Under 5'},{t:'Even/Odd 3',d:'If last 3 digits sum is even, trade ODD. If odd, trade EVEN.',tags:['Even 3','Odd 3'],s:'Trade odd / Trade even',b:true},{t:'Even/Odd 4',d:'If last 4 digits sum is even, trade ODD. If odd, trade EVEN.',tags:['Even 4','Odd 4'],s:'Trade odd / Trade even',b:true},{t:'Even/Odd 5',d:'If last 5 digits sum is even, trade ODD. If odd, trade EVEN.',tags:['Even 5','Odd 5'],s:'Trade odd / Trade even',b:true},{t:'Even/Odd 6',d:'If last 6 digits sum is even, trade ODD. If odd, trade EVEN.',tags:['Even 6','Odd 6'],s:'Trade odd / Trade even',b:true}],[{t:'Dual Rise/Fall',d:'Monitors both Rise and Fall edges simultaneously.',tags:['Rise','Fall'],s:'Rise / Fall'},{t:'Dual Match/Differ',d:'Trades both Match and Differ contracts using pattern detection.',tags:['Match','Differ'],s:'Match / Differ'}],[{t:'Speedbot Turbo',d:'Ultra-fast 1-tick bot for high-volatility indices.',tags:['1 Tick','Turbo'],s:'1 Tick Speed'},{t:'Speedbot Lite',d:'Lightweight speed bot for low-latency execution.',tags:['Fast','Lite'],s:'Speed Trade'}]];
-const chapters=[{n:'Chapter 01',t:'Introduction to Financial Markets',d:'Understanding what financial markets are and the opportunities they present.'},{n:'Chapter 02',t:'Understanding the Deriv Platform',d:'A detailed walkthrough of the Deriv platform and how to navigate it.'},{n:'Chapter 03',t:'Synthetic Indices Explained',d:'Deep dive into volatility indices and trading opportunities they offer 24/7.'},{n:'Chapter 04',t:'Risk Management Fundamentals',d:'Essential risk management techniques to protect your capital.'},{n:'Chapter 05',t:'Technical Analysis Basics',d:'Learn to read charts, identify patterns, and use indicators.'},{n:'Chapter 06',t:'Bot Building Masterclass',d:'Step-by-step guide to building your first automated trading bot.'},{n:'Chapter 07',t:'Even/Odd Strategy Deep Dive',d:'Master the Even/Odd strategy, digit analysis, and entry timing.'},{n:'Chapter 08',t:'Over/Under Trading Strategies',d:'Understand Over/Under contracts and when to apply them.'},{n:'Chapter 09',t:'Martingale & Anti-Martingale',d:'Staking systems, mathematics, risks and safe implementation.'},{n:'Chapter 10',t:'Trading Psychology Mastery',d:'Discipline, fear, greed — how to stay in control under pressure.'},{n:'Chapter 11',t:'Copy Trading & Automation',d:'Set up and manage copy trading systems with multiple client accounts.'},{n:'Chapter 12',t:'Advanced Bot Optimization',d:'Fine-tune bots with advanced parameters and performance analysis.'}];
-const markets=[{n:'V10(1s)',p:4882},{n:'V25(1s)',p:456},{n:'V50(1s)',p:1832},{n:'V75(1s)',p:9321},{n:'V100(1s)',p:4882},{n:'Crash300',p:7422}];
+const autoBots=[{n:'Infinity Algo',d:'Professional-grade bot optimized for consistent performance.'},{n:'Under 7 8 9 Switcher',d:'Advanced automated: Under 7 8 9 Switcher.'},{n:'Differ Switcher Smart Cycle',d:'Advanced: Differ Switcher Smart Cycle.'},{n:'Even Odd Pattern Analysis',d:'If last 5 digits are Even trade Odd and vice versa.'},{n:'Even Odd Percentage Analysis',d:'Trade based on digit percentages - trade even if above 60%.'},{n:'Novaswitch',d:'Novaswitch - professional-grade bot.'},{n:'Over 0 Recovery Over 4',d:'Advanced: Over 0 Recovery Over 4.'},{n:'Over 3 Recovery Over 5',d:'Advanced: Over 3 Recovery Over 5.'}];
+const normalBots=[{n:'Meta Switch',d:'Automate trades with Meta Switch.'},{n:'The even odd bot 1',d:'Automate trades with The even odd bot 1.'},{n:'Candle Mine v3.1',d:'Automate trades with Candle Mine Version 3.1.'},{n:'Digit Hyper',d:'Automate trades with Digit Hyper.'},{n:'Dollar Bot',d:'Automate trades with Dollar Bot.'},{n:'Falcon Bot',d:'Automate trades with Falcon Bot.'},{n:'Gibu V8 PRO 2024',d:'Automate trades with Gibu V8 PRO (2024).'},{n:'Ultra Ai 2025',d:'Automate trades with Ultra Ai 2025.'},{n:'TRADE CITY BOT V2.0',d:'Automate trades with TRADE CITY BOT Version 2.0.'}];
+const aiData=[[{t:'Over 1 / Under 8',d:'Trades whichever edge appears first.',tags:['Over 1','Under 8'],s:'Over 1 / Under 8'},{t:'Over 2 / Under 7',d:'Combines Over 2 and Under 7 edge triggers.',tags:['Over 2','Under 7'],s:'Over 2 / Under 7'},{t:'Over 3 / Under 6',d:'Combines Over 3 and Under 6 edge triggers.',tags:['Over 3','Under 6'],s:'Over 3 / Under 6'},{t:'Over 4 / Under 5',d:'Combines Over 4 and Under 5 edge triggers.',tags:['Over 4','Under 5'],s:'Over 4 / Under 5'},{t:'Even/Odd 3',d:'Last 3 digits sum even = ODD, odd = EVEN.',tags:['Even 3','Odd 3'],s:'Trade odd/even',b:1},{t:'Even/Odd 4',d:'Last 4 digits sum even = ODD, odd = EVEN.',tags:['Even 4','Odd 4'],s:'Trade odd/even',b:1},{t:'Even/Odd 5',d:'Last 5 digits sum even = ODD, odd = EVEN.',tags:['Even 5','Odd 5'],s:'Trade odd/even',b:1},{t:'Even/Odd 6',d:'Last 6 digits sum even = ODD, odd = EVEN.',tags:['Even 6','Odd 6'],s:'Trade odd/even',b:1}],[{t:'Dual Rise/Fall',d:'Monitors Rise and Fall edges simultaneously.',tags:['Rise','Fall'],s:'Rise / Fall'},{t:'Dual Match/Differ',d:'Trades Match and Differ using pattern detection.',tags:['Match','Differ'],s:'Match / Differ'}],[{t:'Speedbot Turbo',d:'Ultra-fast 1-tick bot for high-volatility.',tags:['1 Tick','Turbo'],s:'1 Tick Speed'},{t:'Speedbot Lite',d:'Lightweight speed bot for low-latency.',tags:['Fast','Lite'],s:'Speed Trade'}]];
+const chapters=[{n:'Chapter 01',t:'Introduction to Financial Markets',d:'What markets are and opportunities they present.'},{n:'Chapter 02',t:'Understanding Deriv Platform',d:'A walkthrough of Deriv and how to navigate it.'},{n:'Chapter 03',t:'Synthetic Indices Explained',d:'Volatility indices and 24/7 trading opportunities.'},{n:'Chapter 04',t:'Risk Management Fundamentals',d:'Techniques to protect your capital sustainably.'},{n:'Chapter 05',t:'Technical Analysis Basics',d:'Read charts, identify patterns, use indicators.'},{n:'Chapter 06',t:'Bot Building Masterclass',d:'Build your first automated bot step by step.'},{n:'Chapter 07',t:'Even/Odd Strategy Deep Dive',d:'Master Even/Odd and digit analysis.'},{n:'Chapter 08',t:'Over/Under Trading Strategies',d:'Over/Under contracts and when to use them.'},{n:'Chapter 09',t:'Martingale and Anti-Martingale',d:'Staking systems, math, risks, safe use.'},{n:'Chapter 10',t:'Trading Psychology Mastery',d:'Discipline, fear, greed - control under pressure.'},{n:'Chapter 11',t:'Copy Trading and Automation',d:'Set up copy trading with multiple clients.'},{n:'Chapter 12',t:'Advanced Bot Optimization',d:'Fine-tune bots with advanced parameters.'}];
+const snapMarkets=[{n:'V10(1s)',p:4882},{n:'V25(1s)',p:456},{n:'V50(1s)',p:1832},{n:'V75(1s)',p:9321},{n:'V100(1s)',p:4882},{n:'Crash300',p:7422}];
 
-/* ══ STATE ══ */
-const S={price:4882.48,apexP:4882.48,apexH:[],runs:0,won:0,lost:0,stake:0,payout:0,running:false,runIv:null,lastTks:['E','E','O','E','E','O','E','O'],digits:Array(10).fill(10),balance:10000,currency:'USD',user:null};
-let depCheckoutId='',depPhone='',depAmt=0;
+const S={price:4882.48,apexP:4882.48,apexH:[],runs:0,won:0,lost:0,stake:0,payout:0,running:false,runIv:null,lastTks:['E','E','O','E','E','O','E','O'],digits:Array(10).fill(10),balance:10000,currency:'USD',user:null,isDemo:false,token:null};
+let depCheckoutId='',depPhone='',depAmt=0,ctClients=[];
 
-/* ══ INIT ══ */
-document.addEventListener('DOMContentLoaded',()=>{
-  // Load user from localStorage
+document.addEventListener('DOMContentLoaded',async()=>{
   const token=localStorage.getItem('hpt_token');
   const userJson=localStorage.getItem('hpt_user');
   if(!token||!userJson){window.location.href='/';return;}
-  S.user=JSON.parse(userJson);
-  S.balance=S.user.balance||10000;
+  S.token=token; S.user=JSON.parse(userJson);
+  S.isDemo=S.user.isDemo===true||token==='DEMO';
+  S.balance=parseFloat(S.user.balance)||10000;
   S.currency=S.user.currency||'USD';
-  // Update UI with user info
-  const name=S.user.fullname||S.user.loginid||'Trader';
-  document.getElementById('greet-name').textContent='Hello '+name+' \uD83D\uDC4B';
-  document.getElementById('nav-balance').textContent=parseFloat(S.balance).toFixed(2);
-  document.getElementById('nav-bal').querySelector('.bal-cur').textContent=S.currency;
-  // Mobile balance card
-  const isMob=window.innerWidth<=768;
-  if(isMob){
-    document.getElementById('mob-bal-card').style.display='block';
-    document.getElementById('mob-bal-amt').textContent=parseFloat(S.balance).toFixed(2);
-    document.getElementById('mob-bal-cur').textContent=S.currency+' \u2022 '+(S.user.isDemo?'Demo Account':'Deriv: '+S.user.loginid);
+
+  if(S.isDemo){
+    // Push nav down to make room for demo banner
+    const nav=document.getElementById('app-nav');
+    const body=document.getElementById('app-body');
+    if(nav)nav.style.top='37px';
+    if(body)body.style.paddingTop='89px';
+    // Show demo UI
+    show('demo-banner'); show('demo-card');
+    sv('demo-bal-num','$'+S.balance.toFixed(2));
+    const dtag=document.getElementById('bal-dtag');if(dtag)dtag.style.display='inline-block';
+    sv('nav-cur','USD'); sv('nav-bal-amt','$'+S.balance.toFixed(2));
+    // Demo cannot deposit - show upgrade instead
+    const depBtn=document.getElementById('dep-nav-btn');
+    if(depBtn){depBtn.onclick=showUpgrade;depBtn.title='Upgrade to deposit';}
+  } else {
+    // Real Deriv account
+    showEl('acct-card','flex');
+    const ldot=document.getElementById('bal-ldot');if(ldot)ldot.style.display='inline-block';
+    sv('acct-name',S.user.fullname||'HP Trader');
+    sv('acct-loginid','Deriv: '+(S.user.loginid||'--'));
+    sv('acct-email',S.user.email||'');
+    sv('nav-cur',S.currency);
+    const ba=document.getElementById('nav-bal-amt');
+    if(ba)ba.innerHTML='<span class="bal-shim"></span>';
+    await refreshBalance();
+    setInterval(refreshBalance,30000);
   }
-  // If real Deriv user, fetch live balance
-  if(token!=='DEMO'){
-    fetchLiveBalance(token);
-    setInterval(()=>fetchLiveBalance(token),30000);
-  }
-  buildBotsGrid();buildAIGrid(0);buildChaps();buildSnap();buildApexHist();buildBulkBtns();renderLastTks();
+
+  document.querySelectorAll('.rpt').forEach(t=>t.addEventListener('click',function(){
+    document.querySelectorAll('.rpt').forEach(x=>x.classList.remove('on'));this.classList.add('on');
+  }));
+  document.querySelectorAll('.apex-tf').forEach(b=>b.addEventListener('click',function(){
+    document.querySelectorAll('.apex-tf').forEach(x=>x.classList.remove('on'));this.classList.add('on');
+  }));
+
+  buildBotsGrid();buildAIGrid(0);buildChaps();buildSnap();
+  buildApexHist();buildBulkBtns();renderLastTks();
   startSim();
-  // Right panel tabs
-  document.querySelectorAll('.rpt').forEach(t=>t.addEventListener('click',function(){document.querySelectorAll('.rpt').forEach(x=>x.classList.remove('on'));this.classList.add('on');}));
-  // Apex timeframe buttons
-  document.querySelectorAll('.apex-tf').forEach(b=>b.addEventListener('click',function(){document.querySelectorAll('.apex-tf').forEach(x=>x.classList.remove('on'));this.classList.add('on');}));
 });
 
-/* ══ LIVE BALANCE FROM DERIV ══ */
-async function fetchLiveBalance(token){
+async function refreshBalance(){
+  if(S.isDemo)return;
   try{
-    const r=await fetch('/api/deriv/balance',{headers:{Authorization:'Bearer '+token}});
+    const r=await fetch('/api/deriv/balance',{headers:{'Authorization':'Bearer '+S.token}});
     const d=await r.json();
     if(d.success&&d.balances){
-      const b=parseFloat(d.balances.balance||S.balance);
-      S.balance=b;
-      S.currency=d.balances.currency||S.currency;
-      updateBalanceUI(b,S.currency);
+      const bal=parseFloat(d.balances.balance||S.balance);
+      const cur=d.balances.currency||S.currency;
+      S.balance=bal;S.currency=cur;
+      const f=bal.toFixed(2);
+      sv('nav-cur',cur);sv('nav-bal-amt',f);
+      sv('acct-bal',f);sv('acct-cur',cur);
+      const rcb=document.getElementById('rc-bal');
+      if(rcb&&(rcb.value==='10000'||rcb.value===''))rcb.value=Math.floor(bal);
     }
-  }catch(e){}
-}
-function updateBalanceUI(bal,cur){
-  const f=parseFloat(bal).toFixed(2);
-  document.getElementById('nav-balance').textContent=f;
-  document.getElementById('mob-bal-amt').textContent=f;
-  document.getElementById('mob-bal-cur').textContent=(cur||'USD')+' \u2022 '+(S.user?.isDemo?'Demo Account':'Deriv: '+(S.user?.loginid||''));
-  document.getElementById('nav-bal').querySelector('.bal-cur').textContent=cur||'USD';
+  }catch(e){sv('nav-bal-amt',S.balance.toFixed(2));}
 }
 
-/* ══ NAV ══ */
 function nav(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.nt,[data-mp]').forEach(n=>n.classList.remove('on'));
@@ -874,89 +977,70 @@ function nav(id){
   const nb=document.querySelector('[data-p="'+id+'"]');if(nb)nb.classList.add('on');
   const mb=document.querySelector('[data-mp="'+id+'"]');if(mb)mb.classList.add('on');
 }
-function logout(){localStorage.removeItem('hpt_token');localStorage.removeItem('hpt_user');window.location.href='/';}
-function showMoreMenu(){document.getElementById('more-menu').style.display='flex';}
-function closeMoreMenu(e){if(!e||e.target===document.getElementById('more-menu'))document.getElementById('more-menu').style.display='none';}
 
-/* ══ DEPOSIT MODAL ══ */
-function showDeposit(){document.getElementById('dep-overlay').classList.add('show');resetDeposit();}
+function logout(){localStorage.removeItem('hpt_token');localStorage.removeItem('hpt_user');window.location.href='/';}
+function showUpgrade(){document.getElementById('upg-overlay').classList.add('show');}
+function hideUpgrade(){document.getElementById('upg-overlay').classList.remove('show');}
+function upgradeToReal(){localStorage.removeItem('hpt_token');localStorage.removeItem('hpt_user');window.location.href='/api/deriv/login';}
+function showMore(){const m=document.getElementById('more-overlay');if(m)m.classList.add('show');}
+function hideMore(){const m=document.getElementById('more-overlay');if(m)m.classList.remove('show');}
+
+function showDeposit(){
+  if(S.isDemo){showUpgrade();return;}
+  document.getElementById('dep-overlay').classList.add('show');
+  resetDeposit();
+}
 function hideDeposit(){document.getElementById('dep-overlay').classList.remove('show');}
-function depOverlayClick(e){if(e.target.id==='dep-overlay')hideDeposit();}
-function resetDeposit(){showDepStep(1);document.getElementById('dep-phone').value='';document.getElementById('dep-amount').value='';document.getElementById('dep-err').style.display='none';document.querySelectorAll('.dep-amt-btn').forEach(b=>b.classList.remove('sel'));resetDepBtn();}
-function showDepStep(n){for(let i=1;i<=3;i++){const el=document.getElementById('dep-s'+i);if(el)el.classList.toggle('on',i===n);}}
-function setAmt(a){document.getElementById('dep-amount').value=a;document.querySelectorAll('.dep-amt-btn').forEach(b=>b.classList.toggle('sel',parseInt(b.textContent.replace(',',''))===a));}
-function resetDepBtn(){const b=document.getElementById('dep-submit-btn');if(b){b.disabled=false;document.getElementById('dep-btn-txt').textContent='\uD83D\uDCF7 Send STK Push';}}
+function resetDeposit(){
+  showDepStep(1);
+  const pi=document.getElementById('dep-phone'),ai=document.getElementById('dep-amt');
+  if(pi)pi.value='';if(ai)ai.value='';
+  const e1=document.getElementById('dep-err1');if(e1)e1.style.display='none';
+  document.querySelectorAll('.dep-amt-btn').forEach(b=>b.classList.remove('sel'));
+  const btn=document.getElementById('dep-go-btn');
+  if(btn){btn.disabled=false;sv('dep-btn-txt','Send STK Push');}
+}
+function showDepStep(n){for(let i=1;i<=3;i++){const e=document.getElementById('dep-s'+i);if(e)e.classList.toggle('on',i===n);}}
+function setAmt(a){document.getElementById('dep-amt').value=a;document.querySelectorAll('.dep-amt-btn').forEach(b=>b.classList.toggle('sel',parseInt(b.textContent.replace(',',''))===a));}
 
 async function submitDeposit(){
   const phone=document.getElementById('dep-phone').value.trim();
-  const amount=document.getElementById('dep-amount').value.trim();
-  const errEl=document.getElementById('dep-err');
-  errEl.style.display='none';
-  // Validate
-  if(!phone){showDepErr('Please enter your M-Pesa phone number.',errEl);document.getElementById('dep-phone').classList.add('err');return;}
-  if(!amount||isNaN(amount)||Number(amount)<1){showDepErr('Please enter a valid amount (minimum KES 1).',errEl);document.getElementById('dep-amount').classList.add('err');return;}
+  const amount=document.getElementById('dep-amt').value.trim();
+  const errEl=document.getElementById('dep-err1');errEl.style.display='none';
   document.getElementById('dep-phone').classList.remove('err');
-  document.getElementById('dep-amount').classList.remove('err');
-  // Disable button & show loading
-  const btn=document.getElementById('dep-submit-btn');btn.disabled=true;
-  document.getElementById('dep-btn-txt').textContent='Sending...';
+  document.getElementById('dep-amt').classList.remove('err');
+  if(!phone){showErr(errEl,'Enter your M-Pesa phone number');document.getElementById('dep-phone').classList.add('err');return;}
+  if(!amount||isNaN(amount)||Number(amount)<1){showErr(errEl,'Enter valid amount (min KES 1)');document.getElementById('dep-amt').classList.add('err');return;}
+  const btn=document.getElementById('dep-go-btn');btn.disabled=true;sv('dep-btn-txt','Sending...');
   try{
-    const res=await fetch('/api/mpesa/deposit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,amount:Number(amount)})});
-    const data=await res.json();
+    const r=await fetch('/api/mpesa/deposit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,amount:Number(amount)})});
+    const data=await r.json();
     if(data.success){
-      depCheckoutId=data.checkoutRequestId||'';
-      depPhone=phone;depAmt=Number(amount);
-      document.getElementById('dep-phone-display').textContent=phone;
-      document.getElementById('dep-amt-display').textContent='KES '+Number(amount).toLocaleString();
+      depCheckoutId=data.checkoutRequestId||'';depPhone=phone;depAmt=Number(amount);
+      sv('dep-phone-disp',phone);sv('dep-amt-disp','KES '+Number(amount).toLocaleString());
       showDepStep(2);
-    }else{
-      showDepErr(data.error||'STK Push failed. Please try again.',errEl);
-      resetDepBtn();
-    }
-  }catch(err){
-    showDepErr('Network error. Check your connection and try again.',errEl);
-    resetDepBtn();
-  }
+    }else{showErr(errEl,data.error||'STK Push failed. Try again.');btn.disabled=false;sv('dep-btn-txt','Send STK Push');}
+  }catch(e){showErr(errEl,'Network error. Check connection.');btn.disabled=false;sv('dep-btn-txt','Send STK Push');}
 }
 
 async function checkStatus(){
-  const btn=document.getElementById('dep-check-btn');
-  btn.disabled=true;btn.textContent='Checking...';
+  const btn=document.getElementById('dep-check-btn');btn.disabled=true;btn.textContent='Checking...';
   const errEl=document.getElementById('dep-err2');errEl.style.display='none';
   try{
     let status='pending';
-    if(depCheckoutId){
-      const res=await fetch('/api/mpesa/status/'+depCheckoutId);
-      const data=await res.json();
-      status=data.status||'pending';
-    }else{
-      // Demo mode — simulate success
-      status='completed';
-    }
-    if(status==='completed'||status==='success'){
-      document.getElementById('rec-amount').textContent='KES '+depAmt.toLocaleString();
-      document.getElementById('rec-phone').textContent=depPhone;
-      document.getElementById('rec-ref').textContent='MPX'+Date.now().toString().slice(-8);
-      showDepStep(3);
-      toast('Deposit of KES '+depAmt.toLocaleString()+' confirmed!','green');
-    }else if(status==='cancelled'){
-      showDepErr('Payment was cancelled. Please try again.',errEl);
-      btn.disabled=false;btn.textContent='\u2713 I have entered my PIN \u2014 Check Status';
-    }else if(status==='failed'){
-      showDepErr('Payment failed. Please try again.',errEl);
-      btn.disabled=false;btn.textContent='\u2713 I have entered my PIN \u2014 Check Status';
-    }else{
-      showDepErr('Payment still processing. Please wait and try again.',errEl);
-      btn.disabled=false;btn.textContent='\u2713 I have entered my PIN \u2014 Check Status';
-    }
-  }catch(err){
-    showDepErr('Could not check status. Please wait and try again.',errEl);
-    btn.disabled=false;btn.textContent='\u2713 I have entered my PIN \u2014 Check Status';
-  }
+    if(depCheckoutId){const r=await fetch('/api/mpesa/status/'+depCheckoutId);const data=await r.json();status=data.status||'pending';}
+    else status='completed';
+    if(status==='completed'){
+      sv('rec-amt','KES '+depAmt.toLocaleString());sv('rec-phone',depPhone);sv('rec-ref','MPX'+Date.now().toString().slice(-8));
+      showDepStep(3);toast('Deposit of KES '+depAmt.toLocaleString()+' confirmed!','green');
+      setTimeout(refreshBalance,2000);
+    }else if(status==='cancelled'){showErr(errEl,'Payment cancelled. Try again.');btn.disabled=false;btn.textContent='I have entered my PIN - Check Status';}
+    else if(status==='failed'){showErr(errEl,'Payment failed. Try again.');btn.disabled=false;btn.textContent='I have entered my PIN - Check Status';}
+    else{showErr(errEl,'Still processing. Wait and try again.');btn.disabled=false;btn.textContent='I have entered my PIN - Check Status';}
+  }catch(e){showErr(errEl,'Could not check. Try again.');btn.disabled=false;btn.textContent='I have entered my PIN - Check Status';}
 }
-function showDepErr(msg,el){el=el||document.getElementById('dep-err');el.textContent=msg;el.style.display='block';}
+function showErr(el,msg){el.textContent=msg;el.style.display='block';}
 
-/* ══ SIMULATION ══ */
 function startSim(){
   setInterval(()=>{
     S.price+=(Math.random()-.495)*.38;S.price=Math.round(S.price*100)/100;
@@ -966,64 +1050,55 @@ function startSim(){
     sv('an-price',p);sv('bulk-tick',p);sv('apex-pbig',S.apexP.toFixed(2));
     sv('apex-sp',S.apexP.toFixed(2));sv('apex-bp',S.apexP.toFixed(2));
     drawApex();updateDigits();updateSnap();
-    const isE=Math.floor(S.price*10)%2===0;S.lastTks.push(isE?'E':'O');if(S.lastTks.length>14)S.lastTks.shift();renderLastTks();
+    const isE=Math.floor(S.price*10)%2===0;
+    S.lastTks.push(isE?'E':'O');if(S.lastTks.length>14)S.lastTks.shift();
+    renderLastTks();
   },1100);
 }
 
-/* ══ DIGITS ══ */
 function updateDigits(){
   const r=Array.from({length:10},()=>Math.random());const t=r.reduce((a,b)=>a+b,0);const p=r.map(v=>+(v/t*100).toFixed(1));S.digits=p;
-  p.forEach((v,i)=>{sv('dp'+i,v+'%');const dc=document.getElementById('dc'+i);if(dc){dc.style.borderColor=v>12?'var(--red)':v<8?'var(--green)':'var(--border)';}});
+  p.forEach((v,i)=>{sv('dp'+i,v+'%');const dc=document.getElementById('dc'+i);if(dc)dc.style.borderColor=v>12?'var(--red)':v<8?'var(--green)':'var(--border)';});
   let ev=0;[0,2,4,6,8].forEach(i=>ev+=p[i]);const od=+(100-ev).toFixed(1);ev=+ev.toFixed(1);
   sv('ev-v',ev+'%');sv('od-v',od+'%');sw('ev-f',ev);sw('od-f',od);
   let ov=0;[6,7,8,9].forEach(i=>ov+=p[i]);const un=+(100-ov).toFixed(1);ov=+ov.toFixed(1);
   sv('ov-v',ov+'%');sv('un-v',un+'%');sw('ov-f',ov);sw('un-f',un);
-  const m=+p[5].toFixed(1),d=+(100-m).toFixed(1);sv('ma-v',m+'%');sv('di-v',d+'%');sw('ma-f',m);sw('di-f',d);
+  const m=+p[5].toFixed(1),df=+(100-m).toFixed(1);sv('ma-v',m+'%');sv('di-v',df+'%');sw('ma-f',m);sw('di-f',df);
   const ri=+(45+Math.random()*10).toFixed(1),fa=+(100-ri).toFixed(1);sv('ri-v',ri+'%');sv('fa-v',fa+'%');sw('ri-f',ri);sw('fa-f',fa);
   const row=document.getElementById('meter-row');
   if(row)row.innerHTML=p.slice(0,8).map((v,i)=>{const c=v>12?'var(--red)':v<8?'var(--green)':'var(--blue)';return`<div style="text-align:center"><div class="met-ring" style="border-color:${c}"><div class="mn">${i}</div><div class="mp">${v}%</div></div></div>`;}).join('');
 }
+
 function sv(id,v){const e=document.getElementById(id);if(e)e.textContent=v;}
 function sw(id,v){const e=document.getElementById(id);if(e)e.style.width=Math.min(100,Math.max(3,v))+'%';}
+function show(id){const e=document.getElementById(id);if(e)e.style.display='flex';}
+function showEl(id,disp){const e=document.getElementById(id);if(e)e.style.display=disp||'block';}
 
-/* ══ SNAPSHOT ══ */
-function buildSnap(){const g=document.getElementById('snap-grid');if(!g)return;g.innerHTML=markets.map((m,i)=>`<div class="snap-card"><div class="snap-name">${m.n}</div><div class="snap-price" id="sp-${i}">${m.p.toFixed(2)}</div><div class="snap-chg" id="sc-${i}">--</div></div>`).join('');}
-function updateSnap(){markets.forEach((m,i)=>{const prev=m.p;m.p+=(Math.random()-.495)*.25;m.p=Math.round(m.p*100)/100;const d=+(m.p-prev).toFixed(2);sv('sp-'+i,m.p.toFixed(2));const ce=document.getElementById('sc-'+i);if(ce){ce.textContent=(d>=0?'+':'')+d;ce.style.color=d>=0?'var(--green)':'var(--red)';}});}
+function buildSnap(){const g=document.getElementById('snap-grid');if(!g)return;g.innerHTML=snapMarkets.map((m,i)=>`<div class="snap-card"><div class="snap-name">${m.n}</div><div class="snap-price" id="sp-${i}">${m.p.toFixed(2)}</div><div class="snap-chg" id="sc-${i}">--</div></div>`).join('');}
+function updateSnap(){snapMarkets.forEach((m,i)=>{const prev=m.p;m.p+=(Math.random()-.495)*.25;m.p=Math.round(m.p*100)/100;const d=+(m.p-prev).toFixed(2);sv('sp-'+i,m.p.toFixed(2));const ce=document.getElementById('sc-'+i);if(ce){ce.textContent=(d>=0?'+':'')+d;ce.style.color=d>=0?'var(--green)':'var(--red)';}});}
 
-/* ══ FREE BOTS ══ */
 function buildBotsGrid(f='all'){
   const bots=[...autoBots.map(b=>({...b,auto:true})),...normalBots.map(b=>({...b,auto:false}))].filter(b=>f==='all'||(f==='auto'&&b.auto)||(f==='normal'&&!b.auto));
   const g=document.getElementById('bots-grid');if(!g)return;
-  g.innerHTML=bots.map(b=>`<div class="bcard"><div class="bcard-hdr"><div class="bico${b.auto?' auto':''}">&#9889;</div><div><div class="bname">${b.n}</div>${b.auto?'<span class="bauto">AUTO</span>':''}</div></div><div class="bdesc">${b.d}</div>${b.auto?`<button class="btn-rb">&#9889; Run Bot</button>`:`<button class="btn-lb">&#9654; Load Bot</button>`}</div>`).join('');
+  g.innerHTML=bots.map(b=>`<div class="bcard"><div class="bcard-hdr"><div class="bico${b.auto?' auto':''}">&#9889;</div><div><div class="bname">${b.n}</div>${b.auto?'<span class="bauto">AUTO</span>':''}</div></div><div class="bdesc">${b.d}</div>${b.auto?'<button class="btn-rb">Run Bot</button>':'<button class="btn-lb">Load Bot</button>'}</div>`).join('');
 }
 function fbTab(el,f){document.querySelectorAll('.tab-btn').forEach(t=>t.classList.remove('on'));el.classList.add('on');buildBotsGrid(f);}
-
-/* ══ AI SOFTWARE ══ */
 function buildAIGrid(idx){const g=document.getElementById('ai-grid');if(!g)return;g.innerHTML=aiData[idx].map(b=>`<div class="ai-card${b.b?' b':''}"><div class="ai-title">${b.t}</div><div class="ai-desc">${b.d}</div><div class="ai-tags">${b.tags.map(t=>`<span class="ai-tag${b.b?' b':''}">${t}</span>`).join('')}</div><div class="ai-footer"><span>Setup: <strong>${b.s}</strong></span><button class="btn-ob${b.b?' b':''}">Open bot</button></div></div>`).join('');}
 function aiTab(el,i){document.querySelectorAll('.ai-tab').forEach(t=>t.classList.remove('on'));el.classList.add('on');buildAIGrid(i);}
-
-/* ══ ANALYSIS ══ */
 function dsb(el){el.closest('.ds-row').querySelectorAll('.dsb').forEach(b=>b.classList.remove('on'));el.classList.add('on');}
-
-/* ══ BULK TRADER ══ */
 function buildBulkBtns(){
   const t=document.getElementById('bulk-type')?.value||'Even/Odd';
   const c=document.getElementById('bulk-btns');if(!c)return;
   const map={'Even/Odd':[['Even','var(--green)','#000'],['Odd','var(--red)','#fff']],'Over/Under':[['Over','var(--green)','#000'],['Under','var(--yellow)','#000']],'Match/Differ':[['Match','var(--blue)','#fff'],['Differ','var(--purple)','#fff']],'Rise/Fall':[['Rise','var(--green)','#000'],['Fall','var(--red)','#fff']]};
-  const btns=map[t]||map['Even/Odd'];let ev=0;S.digits?[0,2,4,6,8].forEach(i=>ev+=S.digits[i]):ev=50;ev=+ev.toFixed(1);const od=+(100-ev).toFixed(1);
-  c.innerHTML=btns.map(([lbl,bg,fg],i)=>`<button class="btn-${lbl.toLowerCase()==='even'||lbl.toLowerCase()==='over'||lbl.toLowerCase()==='rise'||lbl.toLowerCase()==='match'?'e':'o'}" style="background:${bg};color:${fg}" onclick="bulkTrade('${lbl.toLowerCase()}')">${lbl}<span class="pct-note">${i===0?ev:od}%</span></button>`).join('');
+  const btns=map[t]||map['Even/Odd'];let ev=0;S.digits&&[0,2,4,6,8].forEach(i=>ev+=S.digits[i]);ev=+ev.toFixed(1);const od=+(100-ev).toFixed(1);
+  c.innerHTML=btns.map(([lbl,bg,fg],i)=>`<button class="${i===0?'btn-e':'btn-o'}" style="background:${bg};color:${fg}" onclick="bulkTrade('${lbl.toLowerCase()}')">${lbl}<span class="pct-note">${i===0?ev:od}%</span></button>`).join('');
 }
-function bulkTrade(type){const sk=parseFloat(document.getElementById('bi-stake')?.value)||.5;S.runs++;S.stake+=sk;const win=Math.random()>.48;if(win){S.won++;S.payout+=sk*1.95;}else S.lost++;updateRPanel();toast((win?'Won $':'Lost $')+(sk*(win?.95:1)).toFixed(2),win?'green':'red');}
+function bulkTrade(type){const sk=parseFloat(document.getElementById('bi-stake')?.value)||.5;S.runs++;S.stake+=sk;const win=Math.random()>.48;if(win){S.won++;S.payout+=sk*1.95;}else S.lost++;updateRPanel();toast((win?'Won':'Lost')+' $'+(sk*(win?.95:1)).toFixed(2),win?'green':'red');}
 function renderLastTks(){const c=document.getElementById('last-tks');if(!c)return;c.innerHTML=S.lastTks.map(t=>`<div class="tk ${t==='E'?'e':'o'}">${t}</div>`).join('');}
-
-/* ══ MANUAL TRADER ══ */
 function openDT(){document.getElementById('dt-load').style.display='none';document.getElementById('dt-open').style.display='block';}
 function closeDT(){document.getElementById('dt-load').style.display='flex';document.getElementById('dt-open').style.display='none';}
-
-/* ══ CHARTS ══ */
 function loadTV(){const l=document.getElementById('chart-load'),f=document.getElementById('tv-frame');if(l)l.style.display='none';if(f){f.style.display='block';f.innerHTML='<iframe src="https://s.tradingview.com/widgetembed/?symbol=BMIX:V100_1S&interval=15&theme=dark&style=1&locale=en&toolbar_bg=060c17&enable_publishing=false&withdateranges=1&hide_side_toolbar=0" width="100%" height="560" frameborder="0" style="border-radius:12px" allowtransparency="true" scrolling="no"></iframe>';}}
 
-/* ══ APEX CHART ══ */
 function buildApexHist(){let p=4882;for(let i=0;i<80;i++){p+=(Math.random()-.495)*.4;S.apexH.push(+p.toFixed(2));}drawApex();}
 function drawApex(){
   const cv=document.getElementById('apex-canvas');if(!cv)return;
@@ -1042,51 +1117,61 @@ function drawApex(){
     const bt=ty(Math.max(o,c)),bh=Math.max(2,Math.abs(ty(o)-ty(c)));ctx.fillRect(x-bw*.38,bt,bw*.76,bh);
   }
   const ma=[];for(let i=20;i<data.length;i++){const s=data.slice(i-20,i).reduce((a,b)=>a+b)/20;ma.push({x:(i/data.length)*W,y:ty(s)});}
-  if(ma.length>1){ctx.strokeStyle='#ff9900aa';ctx.lineWidth=1.5;ctx.beginPath();ma.forEach((pt,i)=>i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y));ctx.stroke();}
+  if(ma.length>1){ctx.strokeStyle='rgba(255,153,0,.67)';ctx.lineWidth=1.5;ctx.beginPath();ma.forEach((pt,i)=>i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y));ctx.stroke();}
   const cy=ty(S.apexP);ctx.strokeStyle='rgba(0,180,255,.4)';ctx.lineWidth=1;ctx.setLineDash([5,5]);ctx.beginPath();ctx.moveTo(0,cy);ctx.lineTo(W,cy);ctx.stroke();ctx.setLineDash([]);
   ctx.fillStyle='#00b4ff';ctx.font='bold 11px Segoe UI,system-ui';ctx.fillText(S.apexP.toFixed(2),W-62,cy-4);
 }
 function apexTrade(t){const a=parseFloat(document.getElementById('apex-amt')?.value)||50;S.runs++;S.stake+=a;const w=Math.random()>.5;if(w){S.won++;S.payout+=a*1.9;}else S.lost++;updateRPanel();toast((t==='buy'?'BUY':'SELL')+' $'+a+' @ '+S.apexP.toFixed(2),t==='buy'?'green':'red');}
 
-/* ══ COPY TRADER ══ */
-let ctClients=[];
 function addCT(){const i=document.getElementById('ct-tok'),tok=i?.value.trim();if(!tok){toast('Enter a valid API token','red');return;}ctClients.push(tok);if(i)i.value='';renderCT();toast('Client added','green');}
-function renderCT(){const n=ctClients.length;sv('ct-active',n+' clients active');sv('ct-n',n);const a=document.getElementById('ct-area');if(!a)return;if(!n){a.innerHTML='<div class="ct-empty"><span style="font-size:2.5rem;opacity:.3;display:block;margin-bottom:10px">&#128101;</span><p style="font-size:.8rem">No clients added yet.</p></div>';return;}a.innerHTML=ctClients.map((t,i)=>`<div style="display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 13px;margin-bottom:7px"><div><div style="font-size:.74rem;font-weight:700;color:var(--green)">Client ${i+1}</div><div style="font-size:.68rem;color:var(--muted);font-family:monospace">${t.slice(0,8)}${'*'.repeat(Math.max(0,t.length-8))}</div></div><button onclick="ctClients.splice(${i},1);renderCT()" style="background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.3);color:var(--red);padding:3px 8px;border-radius:4px;font-size:.66rem;cursor:pointer">Remove</button></div>`).join('');}
+function renderCT(){const n=ctClients.length;sv('ct-active',n+' clients active');sv('ct-n',n);const a=document.getElementById('ct-area');if(!a)return;if(!n){a.innerHTML='<div class="ct-empty"><span style="font-size:2.5rem;opacity:.3;display:block;margin-bottom:10px">&#128101;</span><p style="font-size:.8rem">No clients yet.</p></div>';return;}a.innerHTML=ctClients.map((t,i)=>`<div style="display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 13px;margin-bottom:7px"><div><div style="font-size:.74rem;font-weight:700;color:var(--green)">Client ${i+1}</div><div style="font-size:.68rem;color:var(--muted);font-family:monospace">${t.slice(0,8)}${'*'.repeat(Math.max(0,t.length-8))}</div></div><button onclick="ctClients.splice(${i},1);renderCT()" style="background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.3);color:var(--red);padding:3px 8px;border-radius:4px;font-size:.66rem;cursor:pointer">Remove</button></div>`).join('');}
 
-/* ══ RISK CALC ══ */
 function calcRisk(){
   const bal=+document.getElementById('rc-bal').value||10000,rp=+document.getElementById('rc-rp').value||2,st=+document.getElementById('rc-st').value||1,mul=+document.getElementById('rc-mul').value||2,stp=+document.getElementById('rc-stp').value||5;
   const rAmt=bal*rp/100;let mL=0,s=st;for(let i=0;i<stp;i++){mL+=s;s*=mul;}
   const mS=st*Math.pow(mul,stp-1),rec=Math.min(st,rAmt/mL*st),ttb=Math.floor(rAmt/st);
-  let rat='&#128994; Low';if(rp>5)rat='&#128308; High';else if(rp>2)rat='&#128993; Medium';
-  sv('rc-ml','$'+mL.toFixed(2));sv('rc-ra','$'+rAmt.toFixed(2));sv('rc-ms','$'+mS.toFixed(2));sv('rc-rs','$'+rec.toFixed(4));sv('rc-tb',ttb);document.getElementById('rc-rr').innerHTML=rat;
+  let rat='Low Risk';if(rp>5)rat='High Risk';else if(rp>2)rat='Medium Risk';
+  sv('rc-ml','$'+mL.toFixed(2));sv('rc-ra','$'+rAmt.toFixed(2));sv('rc-ms','$'+mS.toFixed(2));sv('rc-rs','$'+rec.toFixed(4));sv('rc-tb',ttb);sv('rc-rr',rat);
   document.getElementById('rc-res').style.display='block';
 }
-
-/* ══ ACADEMY ══ */
 function buildChaps(){const g=document.getElementById('chaps-grid');if(!g)return;g.innerHTML=chapters.map(c=>`<div class="chap-card"><div class="chap-n">${c.n}</div><div class="chap-t">${c.t}</div><div class="chap-d">${c.d}</div></div>`).join('');}
 
-/* ══ RUN BOT ══ */
 function toggleRun(){
   S.running=!S.running;const btn=document.getElementById('run-btn');
-  if(S.running){btn.innerHTML='&#9646;&#9646; Stop';btn.style.background='var(--red)';S.runIv=setInterval(()=>{const sk=1;S.runs++;S.stake+=sk;const win=Math.random()>.48;if(win){S.won++;S.payout+=sk*1.95;}else S.lost++;updateRPanel();},2000);toast('Bot started!','green');}
-  else{btn.innerHTML='&#9654; Run';btn.style.background='var(--green)';clearInterval(S.runIv);toast('Bot stopped','red');}
+  if(S.running){btn.textContent='Stop';btn.style.background='var(--red)';S.runIv=setInterval(()=>{const sk=1;S.runs++;S.stake+=sk;const win=Math.random()>.48;if(win){S.won++;S.payout+=sk*1.95;}else S.lost++;updateRPanel();},2000);toast('Bot started!','green');}
+  else{btn.textContent='Run';btn.style.background='var(--green)';clearInterval(S.runIv);toast('Bot stopped','red');}
 }
 function updateRPanel(){
   const pnl=S.payout-S.stake;
   sv('rp-stake',S.stake.toFixed(2)+' USD');sv('rp-payout',S.payout.toFixed(2)+' USD');sv('rp-runs',S.runs);sv('rp-lost',S.lost);sv('rp-won',S.won);
-  const el=document.getElementById('rp-pnl');if(el){el.textContent=(pnl>=0?'+':'')+pnl.toFixed(2)+' USD';el.className='rp-s-v '+(pnl>=0?'g':'r');}
+  const el=document.getElementById('rp-pnl');if(el){el.textContent=(pnl>=0?'+':'')+pnl.toFixed(2)+' USD';el.className='rp-sv '+(pnl>=0?'g':'r');}
 }
 function resetStats(){S.runs=0;S.won=0;S.lost=0;S.stake=0;S.payout=0;updateRPanel();}
 function toggleSpeed(){sv('speed-v',document.getElementById('spd-tgl').checked?'TURBO SPEED':'NORMAL SPEED');}
 
-/* ══ TOAST ══ */
-function toast(msg,type='green'){
+function toast(msg,type){
+  type=type||'green';
   const c=type==='green'?'var(--green)':type==='red'?'var(--red)':'var(--blue)';
   const t=document.createElement('div');
-  t.style.cssText=`position:fixed;top:60px;right:14px;background:var(--card);border:1px solid ${c};color:#fff;padding:10px 15px;border-radius:8px;font-size:.78rem;font-weight:600;z-index:9999;animation:toastIn .2s ease;max-width:260px;word-break:break-word;box-shadow:0 4px 14px rgba(0,0,0,.4)`;
+  t.style.cssText='position:fixed;top:62px;right:14px;background:var(--card);border:1px solid '+c+';color:#fff;padding:10px 15px;border-radius:8px;font-size:.78rem;font-weight:600;z-index:9999;max-width:260px;box-shadow:0 4px 14px rgba(0,0,0,.4)';
   t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2600);
 }
 </script>
+
+<div class="upg-overlay" id="upg-overlay" onclick="if(event.target.id==='upg-overlay')hideUpgrade()">
+  <div class="upg-modal">
+    <button class="upg-x" onclick="hideUpgrade()">&times;</button>
+    <div style="font-size:3rem;margin-bottom:10px">&#9889;</div>
+    <div style="font-size:1.2rem;font-weight:900;margin-bottom:8px">Switch to Real Account</div>
+    <div style="font-size:.82rem;color:var(--grey);line-height:1.65;margin-bottom:20px">Login with Deriv to access real money trading with your actual balance and M-Pesa deposits.</div>
+    <div class="upg-feats">
+      <div class="upg-feat"><span style="font-size:1rem">&#128200;</span><div><strong>Real Deriv Balance</strong><br><span style="color:var(--muted);font-size:.74rem">Your actual account balance from Deriv</span></div></div>
+      <div class="upg-feat"><span style="font-size:1rem">&#128247;</span><div><strong>M-Pesa Deposits</strong><br><span style="color:var(--muted);font-size:.74rem">Fund your account via M-Pesa STK Push</span></div></div>
+      <div class="upg-feat"><span style="font-size:1rem">&#129302;</span><div><strong>Live Bot Trading</strong><br><span style="color:var(--muted);font-size:.74rem">Run bots on your real Deriv account</span></div></div>
+    </div>
+    <button class="btn-upg-deriv" onclick="upgradeToReal()">Login with Deriv Account</button>
+    <button class="btn-stay-demo" onclick="hideUpgrade()">Continue with Demo</button>
+  </div>
+</div>
 </body>
 </html>
