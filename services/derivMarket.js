@@ -38,7 +38,7 @@ export function startDerivStream(appId = process.env.DERIV_APP_ID || "33zfvRF3Ds
 /* ── Fetch full account info using OAuth token ── */
 export function fetchDerivAccount(token) {
   return new Promise((resolve, reject) => {
-    const appId = process.env.DERIV_APP_ID || "1089";
+    const appId = process.env.DERIV_APP_ID || "33zfvRF3DsU2CWrMGx7th";
     const conn = new WebSocket(`wss://ws.binaryws.com/websockets/v3?app_id=${appId}`);
     const timeout = setTimeout(() => { conn.close(); reject(new Error("Deriv account fetch timed out")); }, 12000);
     conn.on("open", () => conn.send(JSON.stringify({ authorize: token })));
@@ -65,7 +65,7 @@ export function fetchDerivAccount(token) {
 /* ── Fetch live balance ── */
 export function fetchDerivBalances(token) {
   return new Promise((resolve, reject) => {
-    const appId = process.env.DERIV_APP_ID || "1089";
+    const appId = process.env.DERIV_APP_ID || "33zfvRF3DsU2CWrMGx7th";
     const conn = new WebSocket(`wss://ws.binaryws.com/websockets/v3?app_id=${appId}`);
     const timeout = setTimeout(() => { conn.close(); reject(new Error("Balance fetch timeout")); }, 12000);
     let authorized = false;
