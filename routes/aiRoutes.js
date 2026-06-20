@@ -7,3 +7,4 @@ router.get("/", (_, res) => {
 });
 router.post("/chat", (req, res) => res.json({ status: "OK", message: req.body.message || "" }));
 export default router;
+
